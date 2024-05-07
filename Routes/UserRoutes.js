@@ -26,6 +26,9 @@ userRoute.post('/register',upload.single('image'),userController.CreateUser);
 userRoute.post('/login',userController.LoginUser);
 userRoute.post('/forget',userController.Forget);
 userRoute.post('/reset_pass',userController.Reset);
+userRoute.get('/home',(req,res)=>{
+    res.send('Welcome to the Admin')
+});
 
 
 
